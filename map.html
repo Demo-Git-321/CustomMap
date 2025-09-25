@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amer Centers Dubai</title>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.16.0/maps/maps-web.min.js"></script>
+  <link rel="stylesheet" href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.16.0/maps/maps.css">
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; width: 100%; }
+    #map { width: 100%; height: 100%; }
+      #homeBtn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 999;
+        background: #ffffff;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        padding: 6px 10px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 12px;
+        color: #374151;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    #homeBtn:hover {
+        background: #f9fafb;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* --- MODIFIED CSS STARTS HERE --- */
+
+    /* Custom popup styling - White Theme */
+    .mapboxgl-popup-content {
+        background: #ffffff !important;
+        border: 1px solid #e5e7eb !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1) !important;
+        padding: 16px !important;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+        font-size: 14px !important;
+        color: #1F2937 !important; /* Dark text */
+        min-width: 280px !important;
+        max-width: 350px !important;
+    }
+
+    .mapboxgl-popup-tip {
+        border-top-color: #ffffff !important; /* Match white background */
+        border-bottom-color: #ffffff !important; /* Match white background */
+    }
+
+    .mapboxgl-popup-close-button {
+        display: none !important;
+    }
+
+    .center-info-popup {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #1F2937; /* Dark text */
+    }
+
+    .center-info-popup .center-name {
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .center-info-popup .center-name a {
+    color: #111827 !important; /* Match other bold text */
+    text-decoration: none; /* Remove underline by default */
+    outline: none;
+    border: none;
+}
+
+.center-info-popup .center-name a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+    .center-info-popup .center-name a:focus {
+        outline: none;
+        border: none;
+    }
+
+    .center-info-popup .info-row {
+        margin-bottom: 4px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .center-info-popup .info-label {
+        font-weight: 500;
+        color: #6B7280; /* Medium gray for labels */
+        margin-right: 8px;
+    }
+
+    .center-info-popup .info-value {
+        font-weight: 600;
+        color: #111827; /* Strong dark text for values */
+    }
+
+    .center-info-popup .rating-stars {
+        color: #F59E0B; /* Amber/gold star color for better contrast on white */
+    }
+
+    /* --- MODIFIED CSS ENDS HERE --- */
+
+
+    /* Custom marker styling */
+    .custom-marker {
+        width: 28px;
+        height: 28px;
+        background-image: url('marker-icon.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
+
+    .custom-marker:hover {
+        transform: scale(1.15);
+        transition: all 0.2s ease;
+        filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4));
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <button id="homeBtn">Re-center</button>
+  <script>
+    // --- Map Setup ---
+    const DefaultStyle = 'https://api.tomtom.com/style/2/custom/style/dG9tdG9tQEBAb04zVERRS2ZwWDdhZ2xFSjspn2GLEU1JFIZbzXaj_Yp-.json?key=KEY';
+    const SatelliteStyle = 'https://api.tomtom.com/style/2/custom/style/dG9tdG9tQEBAb04zVERRS2ZwWDdhZ2xFSjtouu6VruNH9K396JnwpLxH.json?key=KEY';
+    const SUNSETMode = 'https://api.tomtom.com/style/2/custom/style/dG9tdG9tQEBAb04zVERRS2ZwWDdhZ2xFSjsB_gBLEvBCSaM_YRMycn2x/drafts/0.json?key=KEY';
+    const defaultCenter = [55.20640070230113,  25.131564168274384];
+    const defaultZoom = 10.5;
+    const defaultPitch = 45;
+    const defaultBearing = 0;
+
+    const map = tt.map({
+      key: 'KEY',
+      container: 'map',
+      center: defaultCenter,
+      zoom: defaultZoom,
+      pitch: defaultPitch,
+      bearing: defaultBearing,
+      style: SUNSETMode
+    });  
+      // --- Popup for hover callouts ---
+
+    let popup = null;
+    let markers = [];
+    let popupTimeout = null;
+    let isMouseOverPopup = false;
+
+    // --- Home Button Logic ---
+    document.getElementById('homeBtn').addEventListener('click', () => {
+    map.flyTo({
+        center: defaultCenter,
+        zoom: defaultZoom,
+        bearing: defaultBearing,
+        pitch: defaultPitch,
+        duration: 2000,
+        essential: true
+    });
+    });
+
+
+    let centersGeoJSON;
+
+    // --- Helpers ---
+    function normalizeString(str) {
+      if (!str) return '';
+      return str.trim().replace(/\s+/g, ' ').toLowerCase();
+    }
+
+    // --- Clear existing markers ---
+    function clearMarkers() {
+      markers.forEach(marker => marker.remove());
+      markers = [];
+    }
+
+    // --- Add markers for centers ---
+    function addCenterMarkers(geoJSON) {
+      clearMarkers();
+      
+      geoJSON.features.forEach(feature => {
+        const coords = feature.geometry.coordinates;
+        const centerName = feature.properties.Center;
+        
+        // Create custom marker element
+        const markerElement = document.createElement('div');
+        markerElement.className = 'custom-marker';
+        
+        // Create marker
+        const marker = new tt.Marker({
+          element: markerElement
+        })
+        .setLngLat(coords)
+        .addTo(map);
+
+        // Add hover events
+        markerElement.addEventListener('mouseenter', (e) => {
+          if (isMouseOverPopup) {
+              return;
+          }
+
+          // Clear any pending timeout
+          if (popupTimeout) {
+            clearTimeout(popupTimeout);
+            popupTimeout = null;
+          }
+          
+          // Remove existing popup
+          if (popup) {
+            popup.remove();
+          }
+          
+          const centerName = feature.properties.Center;
+          const link = feature.properties.link || '#';
+          const rating = feature.properties.rating || 'N/A';
+          const waitingTime = feature.properties.average_waiting_time || 'N/A';
+          
+          // Generate star rating display
+          const generateStars = (rating) => {
+            if (rating === 'N/A') return 'N/A';
+            const stars = Math.round(rating);
+            const fullStars = '★'.repeat(stars);
+            const emptyStars = '☆'.repeat(5 - stars);
+            return `<span class="rating-stars">${fullStars}${emptyStars}</span> ${rating}`;
+          };
+          
+          // Create new popup with formatted content
+          popup = new tt.Popup({
+            closeButton: false,
+            closeOnClick: false,
+            offset: [0, -35]
+          })
+          .setLngLat(coords)
+          .setHTML(`
+            <div class="center-info-popup">
+              <div class="center-name">
+                <strong>Center:</strong> <a href="${link}" target="_blank">${centerName}</a>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Rating:</span>
+                <span class="info-value">${generateStars(rating)}</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Average waiting time:</span>
+                <span class="info-value">${waitingTime}</span>
+              </div>
+            </div>
+          `)
+          .addTo(map);
+
+          // Add hover events to the popup itself with a small delay
+          setTimeout(() => {
+            const popupElement = popup.getElement();
+            if (popupElement) {
+              popupElement.addEventListener('mouseenter', () => {
+                isMouseOverPopup = true;
+                if (popupTimeout) {
+                  clearTimeout(popupTimeout);
+                  popupTimeout = null;
+                }
+              });
+
+              popupElement.addEventListener('mouseleave', () => {
+                isMouseOverPopup = false;
+                popupTimeout = setTimeout(() => {
+                  if (popup) {
+                    popup.remove();
+                    popup = null;
+                  }
+                }, 300);
+              });
+            }
+          }, 100);
+        });
+
+        markerElement.addEventListener('mouseleave', () => {
+          // Add a longer delay before hiding the popup
+          popupTimeout = setTimeout(() => {
+            if (popup) {
+              popup.remove();
+              popup = null;
+            }
+          }, 500);
+        });
+
+        markers.push(marker);
+      });
+    }
+
+    // --- Filter centers based on data ---
+    function filterCenters(lookup) {
+      if (!centersGeoJSON) return { type: 'FeatureCollection', features: [] };
+      
+      const filteredFeatures = centersGeoJSON.features.filter(f => 
+        normalizeString(f.properties.Center) in lookup
+      );
+
+      return { type: 'FeatureCollection', features: filteredFeatures };
+    }
+
+    function updateStyle(selectedStyle) {
+      const norm = normalizeString(selectedStyle);
+      if (norm === 'default') map.setStyle(DefaultStyle);
+      else if (norm === 'satellite') map.setStyle(SatelliteStyle);
+    }
+
+    // --- Core Update ---
+    function updateMapFromVA(msg) {
+      if (!centersGeoJSON) {
+        console.warn("GeoJSON not loaded yet");
+        return;
+      }
+
+      const cols = (msg.columns || []).map(c => (c.label || c.name || "").toLowerCase());
+      const cIdx = cols.indexOf('center');
+      const tIdx = cols.indexOf('time formatted');
+
+      if (cIdx < 0) {
+        console.warn("Missing 'center' column. Got:", cols);
+        return;
+      }
+
+      const rows = msg.data;
+      if (!rows.length) {
+        clearMarkers();
+        return;
+      }
+
+      // If we have time data, get the latest time entries
+      let lookup = {};
+      if (tIdx >= 0) {
+        const lastTime = rows[rows.length - 1][tIdx];
+        rows.forEach(r => {
+          if (r[tIdx] === lastTime) {
+            lookup[normalizeString(r[cIdx])] = true;
+          }
+        });
+      } else {
+        // If no time column, use all centers
+        rows.forEach(r => {
+          lookup[normalizeString(r[cIdx])] = true;
+        });
+      }
+
+      console.log("Filtering centers:", lookup);
+
+      const filtered = filterCenters(lookup);
+      addCenterMarkers(filtered);
+    }
+
+    // --- VA Message Handler ---
+    function onMessage(evt) {
+      console.log("Raw VA event:", evt.data);
+
+      let msg = evt.data;
+      if (msg?.data?.data && Array.isArray(msg.data.data)) msg = msg.data;
+      if (!msg?.data) return;
+
+      updateMapFromVA(msg);
+
+      if (msg.parameters?.Style) updateStyle(msg.parameters.Style);
+    }
+
+    // --- Init ---
+    map.on('load', function () {
+      fetch('centers.geojson')
+        .then(r => r.json())
+        .then(data => {
+          centersGeoJSON = data;
+          
+          // Initially show all centers
+          addCenterMarkers(data);
+          
+          console.log("GeoJSON loaded with", data.features.length, "center features");
+        })
+        .catch(e => console.error("Error loading GeoJSON:", e));
+    });
+
+    if (window.addEventListener) window.addEventListener("message", onMessage, false);
+    else window.attachEvent("onmessage", onMessage);
+
+  </script>
+</body>
+</html>
