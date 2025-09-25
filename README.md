@@ -1,3 +1,3 @@
 # CustomMap
 
-All center ratings and watiing times are synthetic 
+All center ratings and waiting times are synthetic 
