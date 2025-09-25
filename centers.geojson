@@ -7,7 +7,7 @@
         "Center": "Amer Center (Quality Government Service Center)",
         "link": "https://www.google.com/maps/search/Amer+Center+Quality+Government+Service+Center",
         "rating": 4.2,
-        "average_waiting_time": "15 minutes",
+        "average_waiting_time": "6 minutes",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "circle"
@@ -24,7 +24,7 @@
         "Center": "Amer Services",
         "link": "https://www.google.com/maps/search/Amer+Services+Dubai",
         "rating": 4.0,
-        "average_waiting_time": "12 minutes",
+        "average_waiting_time": "10 minutes",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "circle"
@@ -41,7 +41,7 @@
         "Center": "Amer Lounge Dubai Marina صالة آمر",
         "link": "https://www.google.com/maps/search/Amer+Lounge+Dubai+Marina",
         "rating": 4.5,
-        "average_waiting_time": "8 minutes",
+        "average_waiting_time": "7 minutes",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "circle"
@@ -58,7 +58,7 @@
         "Center": "Amer Center Al Quoz | Al Barsha Mall",
         "link": "https://www.google.com/maps/search/Amer+Center+Al+Quoz+Al+Barsha+Mall",
         "rating": 3.8,
-        "average_waiting_time": "20 minutes",
+        "average_waiting_time": "18 minutes",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "circle"
@@ -75,7 +75,7 @@
         "Center": "Amer Al Barsha",
         "link": "https://www.google.com/maps/search/Amer+Al+Barsha+Dubai",
         "rating": 4.1,
-        "average_waiting_time": "18 minutes",
+        "average_waiting_time": "13 minutes",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "circle"
@@ -109,7 +109,7 @@
         "Center": "Amer Center - Al Qouz مركز آمر - القوز",
         "link": "https://www.google.com/maps/search/Amer+Center+Al+Qouz",
         "rating": 4.3,
-        "average_waiting_time": "14 minutes",
+        "average_waiting_time": "9 minutes",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "circle"
@@ -126,7 +126,7 @@
         "Center": "Amer Sheikh Zayed Road | Free Valet | Visa Service",
         "link": "https://www.google.com/maps/search/Amer+Sheikh+Zayed+Road+Dubai",
         "rating": 4.4,
-        "average_waiting_time": "10 minutes",
+        "average_waiting_time": "8 minutes",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "circle"
@@ -143,7 +143,7 @@
         "Center": "References Government Services",
         "link": "https://www.google.com/maps/search/References+Government+Services+Dubai",
         "rating": 3.7,
-        "average_waiting_time": "25 minutes",
+        "average_waiting_time": "21 minutes",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "circle"
@@ -210,8 +210,8 @@
       "properties": {
         "Center": "OnTime Government Services Al Manara Center | DET | Amer | Typing Center",
         "link": "https://www.google.com/maps/search/OnTime+Government+Services+Al+Manara+Center",
-        "rating": 3.6,
-        "average_waiting_time": "28 minutes",
+        "rating": 3.7,
+        "average_waiting_time": "16 minutes",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "circle"
@@ -228,7 +228,7 @@
         "Center": "EGSH Emirates Government Services Hub",
         "link": "https://www.google.com/maps/search/EGSH+Emirates+Government+Services+Hub",
         "rating": 4.1,
-        "average_waiting_time": "17 minutes",
+        "average_waiting_time": "9 minutes",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "circle"
@@ -245,7 +245,7 @@
         "Center": "AMER ( Tathqeef government service) Al Quoz - آمر ( تثقيف للخدمات الحكومية) القوز",
         "link": "https://www.google.com/maps/search/AMER+Tathqeef+government+service+Al+Quoz",
         "rating": 3.9,
-        "average_waiting_time": "21 minutes",
+        "average_waiting_time": "18 minutes",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "circle"
@@ -312,8 +312,8 @@
       "properties": {
         "Center": "Amer Center - Al Taresh Government Services",
         "link": "https://www.google.com/maps/search/Amer+Center+Al+Taresh+Government+Services",
-        "rating": 4.0,
-        "average_waiting_time": "15 minutes",
+        "rating": 4.7,
+        "average_waiting_time": "7 minutes",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "circle"
@@ -329,8 +329,8 @@
       "properties": {
         "Center": "Services 1 Center",
         "link": "https://www.google.com/maps/search/Services+1+Center+Dubai",
-        "rating": 3.5,
-        "average_waiting_time": "30 minutes",
+        "rating": 3.6,
+        "average_waiting_time": "25 minutes",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "circle"
