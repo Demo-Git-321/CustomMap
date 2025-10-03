@@ -4,8 +4,8 @@
     {
       "type": "Feature",
       "properties": {
-        "Center": "Amer Center (Quality Government Service Center)",
-        "link": "https://www.google.com/maps/search/Amer+Center+Quality+Government+Service+Center",
+        "Center": "Customer Service Center 1",
+        "link": "http://google.com",
         "rating": 4.2,
         "average_waiting_time": "6 minutes",
         "marker-color": "#7e7e7e",
@@ -14,15 +14,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.1668923, 24.999702]
+        "coordinates": [55.16699143, 24.99972899]
       },
       "id": 0
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "Amer Services",
-        "link": "https://www.google.com/maps/search/Amer+Services+Dubai",
+        "Center": "Customer Service Center 2",
+        "link": "http://google.com",
         "rating": 4.0,
         "average_waiting_time": "10 minutes",
         "marker-color": "#7e7e7e",
@@ -31,15 +31,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.1218149, 25.0478887]
+        "coordinates": [55.12191403, 25.04791569]
       },
       "id": 1
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "Amer Lounge Dubai Marina صالة آمر",
-        "link": "https://www.google.com/maps/search/Amer+Lounge+Dubai+Marina",
+        "Center": "Customer Service Center 3",
+        "link": "http://google.com",
         "rating": 4.5,
         "average_waiting_time": "7 minutes",
         "marker-color": "#7e7e7e",
@@ -48,15 +48,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.1329732, 25.0737266]
+        "coordinates": [55.13307233, 25.07375359]
       },
       "id": 2
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "Amer Center Al Quoz | Al Barsha Mall",
-        "link": "https://www.google.com/maps/search/Amer+Center+Al+Quoz+Al+Barsha+Mall",
+        "Center": "Customer Service Center 4",
+        "link": "http://google.com",
         "rating": 3.8,
         "average_waiting_time": "18 minutes",
         "marker-color": "#7e7e7e",
@@ -65,15 +65,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.2041793, 25.0993467]
+        "coordinates": [55.20427843, 25.09937369]
       },
       "id": 3
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "Amer Al Barsha",
-        "link": "https://www.google.com/maps/search/Amer+Al+Barsha+Dubai",
+        "Center": "Customer Service Center 5",
+        "link": "http://google.com",
         "rating": 4.1,
         "average_waiting_time": "13 minutes",
         "marker-color": "#7e7e7e",
@@ -82,15 +82,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.2250554, 25.1071244]
+        "coordinates": [55.22515453, 25.10715139]
       },
       "id": 4
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "Amer Center Al Quoz Mall | Bab Al Falah DCS",
-        "link": "https://www.google.com/maps/search/Amer+Center+Al+Quoz+Mall",
+        "Center": "Customer Service Center 6",
+        "link": "http://google.com",
         "rating": 3.9,
         "average_waiting_time": "22 minutes",
         "marker-color": "#7e7e7e",
@@ -99,15 +99,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.2232853, 25.1226082]
+        "coordinates": [55.22338443, 25.12263519]
       },
       "id": 5
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "Amer Center - Al Qouz مركز آمر - القوز",
-        "link": "https://www.google.com/maps/search/Amer+Center+Al+Qouz",
+        "Center": "Customer Service Center 7",
+        "link": "http://google.com",
         "rating": 4.3,
         "average_waiting_time": "9 minutes",
         "marker-color": "#7e7e7e",
@@ -116,15 +116,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.2078834, 25.1256738]
+        "coordinates": [55.20798253, 25.12570079]
       },
       "id": 6
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "Amer Sheikh Zayed Road | Free Valet | Visa Service",
-        "link": "https://www.google.com/maps/search/Amer+Sheikh+Zayed+Road+Dubai",
+        "Center": "Customer Service Center 8",
+        "link": "http://google.com",
         "rating": 4.4,
         "average_waiting_time": "8 minutes",
         "marker-color": "#7e7e7e",
@@ -133,15 +133,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.2704827, 25.2066811]
+        "coordinates": [55.27058183, 25.20670809]
       },
       "id": 7
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "References Government Services",
-        "link": "https://www.google.com/maps/search/References+Government+Services+Dubai",
+        "Center": "Customer Service Center 9",
+        "link": "http://google.com",
         "rating": 3.7,
         "average_waiting_time": "21 minutes",
         "marker-color": "#7e7e7e",
@@ -150,15 +150,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.13888003421763, 25.11435099129308]
+        "coordinates": [55.13897916, 25.11437798]
       },
       "id": 8
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "Amer 247",
-        "link": "https://www.google.com/maps/search/Amer+247+Dubai",
+        "Center": "Customer Service Center 10",
+        "link": "http://google.com",
         "rating": 4.6,
         "average_waiting_time": "5 minutes",
         "marker-color": "#7e7e7e",
@@ -167,15 +167,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.3345903, 25.2702264]
+        "coordinates": [55.33468943, 25.27025339]
       },
       "id": 9
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "Amer Oasis Mall Alreaya",
-        "link": "https://www.google.com/maps/search/Amer+Oasis+Mall+Alreaya",
+        "Center": "Customer Service Center 11",
+        "link": "http://google.com",
         "rating": 4.0,
         "average_waiting_time": "16 minutes",
         "marker-color": "#7e7e7e",
@@ -184,15 +184,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.2417937, 25.1694508]
+        "coordinates": [55.24189283, 25.16947779]
       },
       "id": 10
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "Dubai National Government Services - Amer",
-        "link": "https://www.google.com/maps/search/Dubai+National+Government+Services+Amer",
+        "Center": "Customer Service Center 12",
+        "link": "http://google.com",
         "rating": 4.2,
         "average_waiting_time": "13 minutes",
         "marker-color": "#7e7e7e",
@@ -201,15 +201,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.2968191, 25.2595926]
+        "coordinates": [55.29691823, 25.25961959]
       },
       "id": 11
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "OnTime Government Services Al Manara Center | DET | Amer | Typing Center",
-        "link": "https://www.google.com/maps/search/OnTime+Government+Services+Al+Manara+Center",
+        "Center": "Customer Service Center 13",
+        "link": "http://google.com",
         "rating": 3.7,
         "average_waiting_time": "16 minutes",
         "marker-color": "#7e7e7e",
@@ -218,15 +218,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.2271269, 25.1563746]
+        "coordinates": [55.22722603, 25.15640159]
       },
       "id": 12
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "EGSH Emirates Government Services Hub",
-        "link": "https://www.google.com/maps/search/EGSH+Emirates+Government+Services+Hub",
+        "Center": "Customer Service Center 14",
+        "link": "http://google.com",
         "rating": 4.1,
         "average_waiting_time": "9 minutes",
         "marker-color": "#7e7e7e",
@@ -235,15 +235,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.2284633, 25.1043956]
+        "coordinates": [55.22856243, 25.10442259]
       },
       "id": 13
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "AMER ( Tathqeef government service) Al Quoz - آمر ( تثقيف للخدمات الحكومية) القوز",
-        "link": "https://www.google.com/maps/search/AMER+Tathqeef+government+service+Al+Quoz",
+        "Center": "Customer Service Center 15",
+        "link": "http://google.com",
         "rating": 3.9,
         "average_waiting_time": "18 minutes",
         "marker-color": "#7e7e7e",
@@ -252,15 +252,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.2323797, 25.1533141]
+        "coordinates": [55.23247883, 25.15334109]
       },
       "id": 14
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "Amer Center | Dubai Economy - Al Garhoud Government Transaction Center مركز آمر القرهود / خدمات دائرة التنمية الاقتصادية دبي",
-        "link": "https://www.google.com/maps/search/Amer+Center+Dubai+Economy+Al+Garhoud",
+        "Center": "Customer Service Center 16",
+        "link": "http://google.com",
         "rating": 4.3,
         "average_waiting_time": "11 minutes",
         "marker-color": "#7e7e7e",
@@ -269,15 +269,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.3389152, 25.2453908]
+        "coordinates": [55.33901433, 25.24541779]
       },
       "id": 15
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "Amer Centre Dubai - Main Branch",
-        "link": "https://www.google.com/maps/search/Amer+Centre+Dubai+Main+Branch",
+        "Center": "Customer Service Center 17",
+        "link": "http://google.com",
         "rating": 4.5,
         "average_waiting_time": "9 minutes",
         "marker-color": "#7e7e7e",
@@ -286,15 +286,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.3930949, 25.2933281]
+        "coordinates": [55.39319403, 25.29335509]
       },
       "id": 16
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "Do It Businessmen Services",
-        "link": "https://www.google.com/maps/search/Do+It+Businessmen+Services+Dubai",
+        "Center": "Customer Service Center 18",
+        "link": "http://google.com",
         "rating": 3.8,
         "average_waiting_time": "19 minutes",
         "marker-color": "#7e7e7e",
@@ -303,15 +303,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.1707653, 25.1013543]
+        "coordinates": [55.17086443, 25.10138129]
       },
       "id": 17
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "Amer Center - Al Taresh Government Services",
-        "link": "https://www.google.com/maps/search/Amer+Center+Al+Taresh+Government+Services",
+        "Center": "Customer Service Center 19",
+        "link": "http://google.com",
         "rating": 4.7,
         "average_waiting_time": "7 minutes",
         "marker-color": "#7e7e7e",
@@ -320,15 +320,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.2935578, 25.2352035]
+        "coordinates": [55.29365693, 25.23523049]
       },
       "id": 18
     },
     {
       "type": "Feature",
       "properties": {
-        "Center": "Services 1 Center",
-        "link": "https://www.google.com/maps/search/Services+1+Center+Dubai",
+        "Center": "Customer Service Center 20",
+        "link": "http://google.com",
         "rating": 3.6,
         "average_waiting_time": "25 minutes",
         "marker-color": "#7e7e7e",
@@ -337,7 +337,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.2826566, 25.2170295]
+        "coordinates": [55.28275573, 25.21705649]
       },
       "id": 19
     }
